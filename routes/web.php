@@ -4,8 +4,12 @@ use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('blog-frontend');
 })->name('home');
+
+Route::get('/blog', function () {
+    return view('blog-frontend');
+})->name('blog');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
